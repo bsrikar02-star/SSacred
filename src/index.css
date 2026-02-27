@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-mono: "Courier Prime", monospace;
+  --color-ss-gold: #C8A84B;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FFFFFF] text-[#111111] font-sans antialiased selection:bg-black selection:text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight uppercase leading-[0.9] text-[#111111];
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .leopard-permanent {
+    @apply !text-transparent !bg-clip-text !inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23C8A84B'/%3E%3Cellipse cx='15' cy='12' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='10' cy='17' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='22' cy='17' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='45' cy='8' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='39' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='51' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='75' cy='10' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='69' cy='16' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='82' cy='16' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='105' cy='8' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='99' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='111' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='30' cy='32' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='24' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='36' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='60' cy='28' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='54' cy='34' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='66' cy='34' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='90' cy='32' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='84' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='96' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='15' cy='52' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='9' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='21' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='45' cy='50' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='39' cy='56' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='51' cy='56' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='75' cy='52' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='69' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='81' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='30' cy='70' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='24' cy='76' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='36' cy='76' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3C/svg%3E");
+    background-size: 120px 80px;
+    background-repeat: repeat;
+  }
+
+  /* Define hover logic without @apply on internal custom classes to avoid recursion errors */
+  .leopard-fill:hover {
+    @apply !text-transparent !bg-clip-text !inline-block transition-all duration-300;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23C8A84B'/%3E%3Cellipse cx='15' cy='12' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='10' cy='17' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='22' cy='17' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='45' cy='8' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='39' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='51' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='75' cy='10' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='69' cy='16' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='82' cy='16' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='105' cy='8' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='99' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='111' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='30' cy='32' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='24' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='36' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='60' cy='28' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='54' cy='34' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='66' cy='34' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='90' cy='32' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='84' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='96' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='15' cy='52' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='9' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='21' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='45' cy='50' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='39' cy='56' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='51' cy='56' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='75' cy='52' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='69' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='81' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='30' cy='70' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='24' cy='76' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='36' cy='76' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3C/svg%3E");
+    background-size: 120px 80px;
+  }
+
+  .hover-leopard:hover {
+    @apply !text-transparent !bg-clip-text !inline-block transition-all duration-300;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%23C8A84B'/%3E%3Cellipse cx='15' cy='12' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='10' cy='17' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='22' cy='17' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='45' cy='8' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='39' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='51' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='75' cy='10' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='69' cy='16' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='82' cy='16' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='105' cy='8' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='99' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='111' cy='13' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='30' cy='32' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='24' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='36' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='60' cy='28' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='54' cy='34' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='66' cy='34' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='90' cy='32' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='84' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='96' cy='38' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='15' cy='52' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='9' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='21' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='45' cy='50' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='39' cy='56' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='51' cy='56' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='75' cy='52' rx='6' ry='4' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='69' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='81' cy='57' rx='3.5' ry='2.5' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='30' cy='70' rx='7' ry='4.5' fill='%23704214' opacity='0.85'/%3E%3Cellipse cx='24' cy='76' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3Cellipse cx='36' cy='76' rx='4' ry='3' fill='%23704214' opacity='0.6'/%3E%3C/svg%3E");
+    background-size: 120px 80px;
+  }
+
+  .hover-gold:hover {
+    @apply !text-[#C8A84B] transition-colors duration-300;
+  }
+
+  .logo-hover-effect {
+    @apply transition-all duration-300 inline-block;
+  }
+
+  .logo-hover-effect:hover {
+    @apply scale-110;
+    filter: drop-shadow(0 0 10px rgba(200, 168, 75, 0.6));
+  }
+
+  /* Thicker Branding Font */
+  .font-branding {
+    @apply font-display font-black tracking-[-0.02em] leading-none;
+  }
+
+  .bg-chocolate {
+    background-color: #3C2A21;
+  }
+
+  .text-chocolate {
+    color: #3C2A21;
+  }
+
+  .noise-grain::before {
+    content: "";
+    @apply absolute inset-0 z-[1] pointer-events-none opacity-[0.03];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  .sacred-glow {
+    text-shadow: 0 0 20px rgba(200, 168, 75, 0.3);
+  }
+
+  .container-wide {
+    @apply max-w-[1400px] mx-auto px-6;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
