@@ -55,7 +55,7 @@ function AISearchBar() {
     };
 
     return (
-        <div className="w-full max-w-2xl mx-auto mb-16 relative z-50">
+        <div className="w-full max-w-2xl mx-auto relative z-50">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

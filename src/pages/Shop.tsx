@@ -22,22 +22,32 @@ export default function Shop() {
   return (
     <div className="bg-white min-h-screen noise-grain selection:bg-black selection:text-white">
       <div className="pt-32 pb-20 px-6 max-w-[1400px] mx-auto">
-        <header className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
-          <div>
-            <span className="font-mono text-[9px] font-bold uppercase tracking-[0.4em] text-black/30 mb-4 block underline decoration-[#C8A84B] underline-offset-8">COLLECTION INDEX</span>
-            <InteractiveText
-              text="THE FULL COLLECTION"
-              hoverEffect="leopard"
-              centered={false}
-              className="text-4xl md:text-6xl font-branding text-black leading-none"
-            />
+        <div className="flex flex-col gap-8 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div>
+              <span className="font-mono text-[9px] font-bold uppercase tracking-[0.4em] text-black/30 mb-4 block underline decoration-[#C8A84B] underline-offset-8">COLLECTION INDEX</span>
+              <InteractiveText
+                text="THE FULL COLLECTION"
+                hoverEffect="leopard"
+                centered={false}
+                className="text-4xl md:text-6xl font-branding text-black leading-none"
+              />
+            </div>
+            <div className="hidden md:block">
+              <button className="flex items-center gap-4 px-8 py-3 border border-black/10 font-mono text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all active:scale-95">
+                <Filter size={14} /> FILTER & SORT
+              </button>
+            </div>
           </div>
-          <button className="flex items-center gap-4 px-8 py-3 border border-black/10 font-mono text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all active:scale-95">
-            <Filter size={14} /> FILTER & SORT
-          </button>
-        </header>
 
-        <AISearchBar />
+          <AISearchBar />
+
+          <div className="md:hidden">
+            <button className="w-full flex items-center justify-center gap-4 px-8 py-3 border border-black/10 font-mono text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all active:scale-95">
+              <Filter size={14} /> FILTER & SORT
+            </button>
+          </div>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
           {products.map((product, i) => (
