@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
 
@@ -18,18 +19,20 @@ export default function Navbar() {
 
   // Force scrolled state (black/white contrast) on pages with white backgrounds
   const isWhiteBackground = location.pathname !== '/';
-  const isActiveState = isScrolled || isWhiteBackground;
+  const isActiveState = isScrolled || isWhiteBackground || isMobileMenuOpen;
 
-  const textColor = isActiveState ? 'text-black' : 'text-white';
-  const logoColor = isActiveState ? 'text-black' : 'text-white';
-  const iconColor = isActiveState ? 'text-black' : 'text-white';
-  const navBg = isActiveState ? 'bg-white/90 backdrop-blur-md border-b border-black/5 shadow-sm' : 'bg-transparent';
-  const navHeight = isActiveState ? 'h-11' : 'h-13';
+  const textColor = isActiveState || isMobileMenuOpen ? 'text-black' : 'text-white';
+  const logoColor = isActiveState || isMobileMenuOpen ? 'text-black' : 'text-white';
+  const iconColor = isActiveState || isMobileMenuOpen ? 'text-black' : 'text-white';
+  const navBg = isActiveState ? 'bg-white/95 backdrop-blur-md border-b border-black/5 shadow-sm' : 'bg-transparent';
+  const navHeight = isActiveState ? 'h-14' : 'h-16';
+
+  const menuItems = ['Shop', 'Brands', 'Wardrobes', 'Accessories', 'Support', 'Story', 'Careers'];
 
   return (
     <>
       {/* Top Black Marquee with Gold Text */}
-      <div className="fixed top-0 left-0 right-0 z-[60] h-8 bg-black flex items-center overflow-hidden border-b border-white/5">
+      <div className="fixed top-0 left-0 right-0 z-[70] h-8 bg-black flex items-center overflow-hidden border-b border-white/5">
         <div className="whitespace-nowrap flex animate-[marquee_50s_linear_infinite] hover:[animation-play-state:paused] cursor-default">
           {[...Array(10)].map((_, i) => (
             <span key={i} className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] mx-6 self-center" style={{ color: '#C8A84B' }}>
@@ -40,21 +43,35 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar - Dynamic B&W Style */}
-      <nav className={`fixed top-8 left-0 right-0 z-50 transition-all duration-500 ${navBg} ${navHeight}`}>
+      <nav className={`fixed top-8 left-0 right-0 z-[60] transition-all duration-500 ${navBg} ${navHeight}`}>
         <div className="max-w-[1400px] mx-auto px-6 h-full flex items-center justify-between">
-          <Link to="/" className={`text-[24px] font-branding leopard-permanent logo-hover-effect ${logoColor}`}>
-            SSacred
-          </Link>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`md:hidden p-2 -ml-2 ${iconColor} transition-colors`}
+            >
+              {isMobileMenuOpen ? <X size={20} /> : (
+                <div className="flex flex-col gap-1.5 w-6">
+                  <div className={`h-[1px] w-full ${isActiveState ? 'bg-black' : 'bg-white'}`} />
+                  <div className={`h-[1px] w-2/3 ${isActiveState ? 'bg-black' : 'bg-white'}`} />
+                  <div className={`h-[1px] w-full ${isActiveState ? 'bg-black' : 'bg-white'}`} />
+                </div>
+              )}
+            </button>
+            <Link to="/" className={`text-[20px] md:text-[24px] font-branding leopard-permanent logo-hover-effect ${logoColor}`}>
+              SSacred
+            </Link>
+          </div>
 
-          {/* Links with dynamic text color */}
-          <div className="hidden md:flex items-center gap-10">
-            {['Shop', 'Brands', 'Wardrobes', 'Accessories', 'Support', 'Story', 'Careers'].map((item) => (
+          {/* Links with dynamic text color - Desktop */}
+          <div className="hidden md:flex items-center gap-8">
+            {menuItems.map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase()}`}
                 className="relative group py-1"
               >
-                <span className={`text-[12px] font-mono font-bold uppercase tracking-[0.15em] ${textColor} hover-gold transition-colors duration-300`}>
+                <span className={`text-[11px] font-mono font-bold uppercase tracking-[0.15em] ${textColor} hover-gold transition-colors duration-300`}>
                   {item}
                 </span>
                 <motion.div
@@ -64,8 +81,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className={`flex items-center gap-6 ${iconColor} transition-colors duration-300`}>
-            <button onClick={() => setIsSearchOpen(!isSearchOpen)} className="hover:opacity-60 hover:text-[#C8A84B] transition-all">
+          <div className={`flex items-center gap-4 md:gap-6 ${iconColor} transition-colors duration-300`}>
+            <button onClick={() => setIsSearchOpen(!isSearchOpen)} className="hover:opacity-60 hover:text-[#C8A84B] transition-all hidden sm:block">
               {isSearchOpen ? <X size={16} strokeWidth={2.5} /> : <Search size={16} strokeWidth={2.5} />}
             </button>
             <Link to="/wishlist" className="hover:opacity-60 hover:text-[#C8A84B] transition-all relative">
@@ -73,15 +90,43 @@ export default function Navbar() {
             </Link>
             <Link to="/cart" className="relative hover:opacity-60 hover:text-[#C8A84B] transition-all">
               <ShoppingBag size={16} strokeWidth={2.5} />
-              <span className={`absolute -top-1.5 -right-1.5 ${isActiveState ? 'bg-black text-white' : 'bg-white text-black'} text-[7px] font-bold w-3 h-3 rounded-full flex items-center justify-center`}>
+              <span className={`absolute -top-1.5 -right-1.5 ${isActiveState ? 'bg-black text-white' : 'bg-white text-black'} text-[7px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center`}>
                 0
               </span>
             </Link>
-            <Link to="/account" className="hover:opacity-60 hover:text-[#C8A84B] transition-all">
-              <User size={16} strokeWidth={2.5} />
-            </Link>
           </div>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: '100vh', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="absolute top-full left-0 right-0 bg-white border-t border-black/5 overflow-hidden md:hidden"
+            >
+              <div className="flex flex-col p-8 gap-8">
+                {menuItems.map((item, i) => (
+                  <motion.div
+                    key={item}
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <Link
+                      to={`/${item.toLowerCase()}`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-4xl font-branding text-black hover:leopard-fill transition-all"
+                    >
+                      {item}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Search Dropdown */}
         <AnimatePresence>

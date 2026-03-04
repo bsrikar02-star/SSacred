@@ -94,7 +94,7 @@ function ProductStrip({ title, subtitle, products }: { title: string; subtitle: 
     <div className="px-6 max-w-[1400px] mx-auto py-4 md:py-6">
       <div className="flex justify-between items-end mb-6">
         <div>
-          <span className="font-mono text-[9px] font-bold uppercase tracking-[0.3em] text-black/30 mb-2 block">{subtitle}</span>
+          <span className="font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-black/40 mb-2 block">{subtitle}</span>
           <h2 className="text-2xl md:text-3xl font-display text-black uppercase">{title}</h2>
         </div>
         <div className="flex gap-2">
@@ -141,7 +141,7 @@ export default function Home() {
               <h1 className="text-[10px] md:text-[11px] font-mono font-black text-white/90 tracking-[0.8em] mb-1.5 uppercase">
                 CHANGE YOUR CLOTHING WITH
               </h1>
-              <Link to="/" className="text-7xl md:text-9xl lg:text-[11rem] font-branding leopard-permanent leading-[0.8] logo-hover-effect">
+              <Link to="/" className="text-6xl md:text-9xl lg:text-[11rem] font-branding leopard-permanent leading-[0.8] logo-hover-effect text-white/90">
                 SSacred
               </Link>
             </div>
@@ -162,9 +162,9 @@ export default function Home() {
                 <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-white">Watch Manifesto</span>
               </Link>
             </div>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 1 }} className="flex flex-col items-center gap-4">
-              <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-white/20">Scroll</span>
-              <div className="w-[1px] h-8 bg-white/10" />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 1 }} className="flex flex-col items-center gap-4 mt-4">
+              <span className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.4em] text-white/40">Scroll</span>
+              <div className="w-[1px] h-10 bg-white/20" />
             </motion.div>
           </motion.div>
         </div>
@@ -182,7 +182,7 @@ export default function Home() {
           {/* Wardrobes – Text Left, Photo Right */}
           <div className="flex-1 flex flex-col md:flex-row border-b xl:border-b-0 xl:border-r border-black/5 group">
             <div className="w-full md:w-1/2 p-10 lg:p-14 flex flex-col justify-center bg-[#FAFAFA] group-hover:bg-white transition-colors order-2 md:order-1">
-              <span className="font-mono text-[9px] font-bold uppercase tracking-[0.5em] text-black/30 mb-6 block">THE CURATED UNIVERSE</span>
+              <span className="font-mono text-[11px] font-bold uppercase tracking-[0.5em] text-black/40 mb-6 block">THE CURATED UNIVERSE</span>
               <InteractiveText text="WARDROBES" hoverEffect="leopard" centered={false} className="text-3xl md:text-4xl font-display text-black mb-6 leading-none" />
               <p className="text-[12px] md:text-[13px] font-medium text-black/50 mb-8 leading-relaxed uppercase tracking-wider">
                 Sculpt your identity with our seasonal capsules. Every piece is a chapter; every wardrobe is a story of uncompromising style.
@@ -202,7 +202,7 @@ export default function Home() {
               <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=1200&auto=format&fit=crop" className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-[2000ms]" alt="Accessories" />
             </div>
             <div className="w-full md:w-1/2 p-10 lg:p-14 flex flex-col justify-center">
-              <span className="font-mono text-[9px] font-bold uppercase tracking-[0.5em] text-black/30 mb-6 block">THE SCULPTED DETAIL</span>
+              <span className="font-mono text-[11px] font-bold uppercase tracking-[0.5em] text-black/40 mb-6 block">THE SCULPTED DETAIL</span>
               <InteractiveText text="ACCESSORIES" hoverEffect="leopard" centered={false} className="text-3xl md:text-4xl font-display text-black mb-6 leading-none" />
               <p className="text-[12px] md:text-[13px] font-medium text-black/50 mb-8 leading-relaxed uppercase tracking-wider">
                 Handcrafted to endure, designed to provoke. The finishing resonance for the individual who demands excellence in every stitch.

@@ -35,10 +35,17 @@ html {
   .leopard-permanent {
     @apply !text-transparent !bg-clip-text !inline-block;
     background-image: url("/leopard_texture.png");
-    background-size: 150px auto;
+    background-size: 80px auto;
+    /* More dense and clear on laptop */
     background-repeat: repeat;
-    image-rendering: crisp-edges;
-    -webkit-text-stroke: 0.04em #000000;
+    image-rendering: auto;
+    -webkit-text-stroke: 0.03em #000000;
+  }
+
+  @media (min-width: 1024px) {
+    .leopard-permanent {
+      background-size: 120px auto;
+    }
   }
 
   /* Define hover logic without @apply on internal custom classes to avoid recursion errors */
@@ -47,24 +54,35 @@ html {
     filter: none;
   }
 
-  .leopard-fill:hover {
-    @apply !text-transparent !bg-clip-text !inline-block transition-all duration-300;
-    background-image: url("/leopard_texture.png");
-    background-size: 150px auto;
-    background-repeat: repeat;
-    -webkit-text-stroke: 0.04em #000000;
+  /* Always show color on mobile to avoid touch hover issues */
+  @media (hover: none) {
+    .leopard-fill {
+      @apply !text-transparent !bg-clip-text !inline-block;
+      background-image: url("/leopard_texture.png");
+      background-size: 80px auto;
+      -webkit-text-stroke: 0.03em #000000;
+    }
+
+    .grayscale {
+      filter: none !important;
+      /* Fix touch input color failure */
+    }
   }
 
-  .hover-leopard {
-    @apply transition-all duration-300;
-  }
+  @media (hover: hover) {
+    .leopard-fill:hover {
+      @apply !text-transparent !bg-clip-text !inline-block transition-all duration-300;
+      background-image: url("/leopard_texture.png");
+      background-size: 150px auto;
+      -webkit-text-stroke: 0.04em #000000;
+    }
 
-  .hover-leopard:hover {
-    @apply !text-transparent !bg-clip-text !inline-block transition-all duration-300;
-    background-image: url("/leopard_texture.png");
-    background-size: 150px auto;
-    background-repeat: repeat;
-    -webkit-text-stroke: 0.04em #000000;
+    .hover-leopard:hover {
+      @apply !text-transparent !bg-clip-text !inline-block transition-all duration-300;
+      background-image: url("/leopard_texture.png");
+      background-size: 120px auto;
+      -webkit-text-stroke: 0.04em #000000;
+    }
   }
 
   .hover-gold:hover {
