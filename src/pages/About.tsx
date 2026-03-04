@@ -10,7 +10,7 @@ export default function About() {
         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1519744346361-7a029b427a59?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center grayscale" />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10" />
 
-        <div className="relative z-20 max-w-4xl pb-20">
+        <div className="relative z-20 container-wide pb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

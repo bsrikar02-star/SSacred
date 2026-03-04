@@ -28,8 +28,8 @@ export default function Support() {
 
     return (
         <div className="bg-white min-h-screen noise-grain selection:bg-black selection:text-white">
-            <div className="pt-32 pb-20 px-6 max-w-[1400px] mx-auto">
-                <header className="max-w-4xl mb-24">
+            <div className="pt-32 pb-20 px-6 container-wide">
+                <header className="mb-24">
                     <span className="font-mono text-[9px] font-bold uppercase tracking-[0.5em] text-black/30 mb-6 block underline decoration-[#C8A84B] underline-offset-8 uppercase">SSACRED RESPONSE UNIT</span>
                     <InteractiveText
                         text="WE HAVE YOUR BACK"

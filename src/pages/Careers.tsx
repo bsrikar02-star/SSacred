@@ -71,7 +71,7 @@ export default function Careers() {
         <div className="bg-white min-h-screen noise-grain selection:bg-[#C8A84B] selection:text-white font-sans overflow-x-hidden">
             <div className="pt-32 pb-16 px-6 max-w-[1400px] mx-auto">
                 {/* Hero Header */}
-                <header className="max-w-4xl mb-24">
+                <header className="mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ export default function Careers() {
                             text="JOIN THE SSACRED ARCHIVE"
                             hoverEffect="leopard"
                             centered={false}
-                            wordClassName="text-4xl md:text-[6vw] font-branding text-[#111111] leading-[0.9] tracking-tight sacred-glow"
+                            wordClassName="text-4xl md:text-[6vw] font-branding text-[#111111] leading-[0.9] tracking-tight"
                             className="mb-8"
                         />
                         <div className="h-[2px] w-16 bg-[#C8A84B] mb-8" />

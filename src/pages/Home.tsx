@@ -141,7 +141,7 @@ export default function Home() {
               <h1 className="text-[10px] md:text-[11px] font-mono font-black text-white/90 tracking-[0.8em] mb-1.5 uppercase">
                 CHANGE YOUR CLOTHING WITH
               </h1>
-              <Link to="/" className="text-6xl md:text-8xl lg:text-[7.5rem] font-branding leopard-permanent leading-[0.8] logo-hover-effect">
+              <Link to="/" className="text-7xl md:text-9xl lg:text-[11rem] font-branding leopard-permanent leading-[0.8] logo-hover-effect">
                 SSacred
               </Link>
             </div>
