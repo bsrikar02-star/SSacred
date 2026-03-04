@@ -31,7 +31,7 @@ export const InteractiveText = ({
         >
             {words.map((word, i) => {
                 const lowerWord = word.toLowerCase().replace(/[^a-z]/g, '');
-                const leopardKeywords = ["ssacred"];
+                const leopardKeywords = ["ssacred", "collection", "brand", "wardrobes", "accessories", "back", "better"];
                 const isLeopardText = leopardKeywords.includes(lowerWord) || (lowerWord === "count" && text.toLowerCase().includes("make them"));
                 const shouldBePermanent = permanentEffect || isLeopardText;
 

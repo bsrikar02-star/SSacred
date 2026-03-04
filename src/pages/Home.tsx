@@ -148,7 +148,7 @@ export default function Home() {
             <div className="max-w-lg mb-8 px-6">
               <InteractiveText
                 text="High-quality curated design from niche brands, made accessible for everyone who wants to dress better."
-                hoverEffect="gold"
+                hoverEffect="leopard"
                 className="text-[13px] md:text-[14px] font-medium text-white/70 leading-relaxed tracking-wide"
                 delay={0.5}
               />
