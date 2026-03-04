@@ -23,13 +23,13 @@ export default function Shop() {
     <div className="bg-white min-h-screen noise-grain selection:bg-black selection:text-white">
       <div className="pt-32 pb-20 px-6 max-w-[1400px] mx-auto">
         <div className="flex flex-col gap-8 mb-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <div>
+          <div className="flex flex-col items-center text-center gap-8">
+            <div className="flex flex-col items-center">
               <span className="font-mono text-[9px] font-bold uppercase tracking-[0.4em] text-black/30 mb-4 block underline decoration-[#C8A84B] underline-offset-8">COLLECTION INDEX</span>
               <InteractiveText
                 text="THE FULL COLLECTION"
                 hoverEffect="leopard"
-                centered={false}
+                centered={true}
                 className="text-3xl md:text-5xl lg:text-7xl font-branding text-black leading-none"
               />
             </div>
