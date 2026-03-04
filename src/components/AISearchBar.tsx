@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, Image, Type, Sparkles, X, Plus, Upload, ArrowRight, History, Clock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { SearchLoading } from './SearchLoading';
 
 const placeholders = [
     "ADD IMAGES FOR RECOMMENDATIONS",
@@ -18,6 +19,7 @@ function AISearchBar() {
     const [isPersonalized, setIsPersonalized] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [files, setFiles] = useState<File[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -50,12 +52,22 @@ function AISearchBar() {
 
     const handleSearch = () => {
         if (text.trim() || files.length > 0) {
-            navigate('/recommendations');
+            setIsLoading(true);
         }
+    };
+
+    const onSearchComplete = () => {
+        setIsLoading(false);
+        navigate('/recommendations');
     };
 
     return (
         <div className="w-full max-w-2xl mx-auto relative z-50">
+            <AnimatePresence>
+                {isLoading && (
+                    <SearchLoading onComplete={onSearchComplete} />
+                )}
+            </AnimatePresence>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

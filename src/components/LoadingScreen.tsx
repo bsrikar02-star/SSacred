@@ -56,7 +56,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           opacity: [0.8, 1, 0.8]
         }}
         transition={{ duration: 1.8, repeat: Infinity }}
-        className="text-8xl font-branding leopard-permanent tracking-[0.14em] sacred-glow"
+        className="text-7xl md:text-9xl lg:text-[11rem] font-branding leopard-permanent tracking-[0.14em] sacred-glow"
       >
         SSacred
       </motion.div>

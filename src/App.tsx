@@ -72,14 +72,14 @@ function ScrollToTop() {
 
   useEffect(() => {
     const messages = [
-      "Don't leave us...",
-      "Come back...",
-      "SSacred misses you",
-      "Your fit is waiting",
-      "Cart is getting lonely",
-      "New drops just landed",
-      "Your style is calling",
-      "Archive is updating..."
+      "🐆 don't leave us...",
+      "👀 come back...",
+      "🖤 SSacred misses you",
+      "✨ your fit is waiting",
+      "🛍️ cart is getting lonely",
+      "🔥 new drops just landed",
+      "💀 your style is calling",
+      "🐆 Archive is updating..."
     ];
     let index = 0;
     let titleInterval: any;
