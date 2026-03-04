@@ -33,9 +33,9 @@ export default function Support() {
                     <span className="font-mono text-[9px] font-bold uppercase tracking-[0.5em] text-black/30 mb-6 block underline decoration-[#C8A84B] underline-offset-8 uppercase">SSACRED RESPONSE UNIT</span>
                     <InteractiveText
                         text="WE HAVE YOUR BACK"
-                        hoverEffect="gold"
+                        hoverEffect="leopard"
                         centered={false}
-                        className="text-5xl md:text-8xl font-branding text-black leading-none mb-10"
+                        className="text-4xl md:text-7xl lg:text-8xl font-branding text-black leading-none mb-10"
                     />
                     <p className="text-[14px] md:text-[16px] font-medium text-black/60 leading-relaxed max-w-2xl uppercase tracking-wider">
                         AT <span className="leopard-permanent">SSacred</span>, WE STAND AS THE VIGILANT MIDDLEMAN BETWEEN YOU AND THE BRANDS. OUR MISSION IS TO ENSURE THAT EVERY STITCH DELIVERED MEETS THE UNCOMPROMISING STANDARDS WE PROMISE.

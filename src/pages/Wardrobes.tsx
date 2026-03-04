@@ -42,7 +42,8 @@ export default function Wardrobes() {
           <InteractiveText
             text="WARDROBES"
             centered={false}
-            className="text-5xl md:text-7xl font-branding text-[#F5F2ED] mb-4"
+            hoverEffect="leopard"
+            className="text-4xl md:text-7xl lg:text-8xl font-branding text-[#F5F2ED] mb-4"
           />
         </header>
 

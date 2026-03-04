@@ -46,7 +46,8 @@ export default function Brands() {
           <InteractiveText
             text="OUR BRAND PARTNERS"
             centered={false}
-            className="text-4xl md:text-5xl font-branding text-black"
+            hoverEffect="leopard"
+            className="text-4xl md:text-7xl lg:text-8xl font-branding text-black leading-none mb-10"
           />
         </header>
 

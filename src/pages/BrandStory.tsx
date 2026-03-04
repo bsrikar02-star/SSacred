@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { InteractiveText } from '../components/InteractiveText';
 
 const brandStories = {
   'rawcraft': {
@@ -47,7 +48,11 @@ export default function BrandStory() {
           className="text-center mb-20"
         >
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-[#8B6914] mb-4 block">The Story</span>
-          <h1 className="text-7xl md:text-9xl font-display text-[#F5F2ED] mb-6">{brand.name}</h1>
+          <InteractiveText
+            text={`${brand.name} STORY`}
+            className="text-7xl md:text-9xl font-branding text-[#F5F2ED] mb-6"
+            hoverEffect="leopard"
+          />
           <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#F5F2ED]/40">{brand.tagline}</p>
         </motion.div>
 

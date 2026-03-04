@@ -30,7 +30,7 @@ export default function Shop() {
                 text="THE FULL COLLECTION"
                 hoverEffect="leopard"
                 centered={false}
-                className="text-4xl md:text-6xl font-branding text-black leading-none"
+                className="text-4xl md:text-7xl lg:text-8xl font-branding text-black leading-none"
               />
             </div>
             <div className="hidden md:block">

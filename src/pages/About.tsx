@@ -17,9 +17,12 @@ export default function About() {
             transition={{ duration: 1 }}
           >
             <span className="font-mono text-[10px] font-bold uppercase tracking-[0.5em] text-[#C8A84B] mb-8 block underline decoration-[#C8A84B] underline-offset-8">THE MANIFESTO</span>
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-branding text-black leading-none mb-10 tracking-tight">
-              WE ARE FOR EVERYONE WHO WANTS TO DRESS BETTER.
-            </h1>
+            <InteractiveText
+              text="WE ARE FOR EVERYONE WHO WANTS TO DRESS BETTER."
+              className="text-4xl md:text-6xl lg:text-8xl font-branding text-black leading-none mb-10 tracking-tight"
+              hoverEffect="leopard"
+              centered={false}
+            />
             <p className="font-mono text-[14px] md:text-[16px] text-black/60 uppercase tracking-widest leading-relaxed max-w-2xl font-bold">
               SSacred was born to bridge the gap between niche visionaries and everyday wardrobes. We believe that for the exact same budget, you shouldn't have to settle for second-tier mainstream fabrics. You deserve high-quality, authentic design.
             </p>
