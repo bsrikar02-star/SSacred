@@ -48,7 +48,7 @@ export default function Navbar() {
 
           {/* Links with dynamic text color */}
           <div className="hidden md:flex items-center gap-10">
-            {['Shop', 'Brands', 'Wardrobes', 'Accessories', 'Support', 'Story'].map((item) => (
+            {['Shop', 'Brands', 'Wardrobes', 'Accessories', 'Support', 'Story', 'Careers'].map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase()}`}

@@ -30,9 +30,9 @@ export const InteractiveText = ({
             className={`flex flex-wrap ${centered ? 'justify-center' : 'justify-start'} ${className}`}
         >
             {words.map((word, i) => {
-                // Robust detection: SSacred anywhere (case-insensitive) OR "count" in the philosophy context
                 const lowerWord = word.toLowerCase().replace(/[^a-z]/g, '');
-                const isLeopardText = lowerWord === "ssacred" || (lowerWord === "count" && text.toLowerCase().includes("make them"));
+                const leopardKeywords = ["ssacred", "wardrobes", "wardrobe", "brand", "collection", "accessories", "accessory"];
+                const isLeopardText = leopardKeywords.includes(lowerWord) || (lowerWord === "count" && text.toLowerCase().includes("make them"));
                 const shouldBePermanent = permanentEffect || isLeopardText;
 
                 return (

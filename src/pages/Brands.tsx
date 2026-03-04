@@ -9,7 +9,7 @@ const brands = [
     location: 'Delhi',
     style: 'Brutalist Streetwear',
     logo: 'https://images.unsplash.com/photo-1620288627223-53302f4e8c74?q=80&w=200&auto=format&fit=crop',
-    img: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=600&auto=format&fit=crop'
+    img: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'venom-ink',
@@ -17,7 +17,7 @@ const brands = [
     location: 'Mumbai',
     style: 'Dark Editorial',
     logo: 'https://images.unsplash.com/photo-1560155016-bd4879ae8f21?q=80&w=200&auto=format&fit=crop',
-    img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop'
+    img: 'https://images.unsplash.com/photo-1519744346361-7a029b427a59?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'gridlock',
@@ -25,7 +25,7 @@ const brands = [
     location: 'Bangalore',
     style: 'Technical Futurism',
     logo: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=200&auto=format&fit=crop',
-    img: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop'
+    img: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'moth-silk',
@@ -33,7 +33,7 @@ const brands = [
     location: 'Pune',
     style: 'Old Money Revived',
     logo: 'https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=200&auto=format&fit=crop',
-    img: 'https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=600&auto=format&fit=crop'
+    img: 'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=800&auto=format&fit=crop'
   },
 ];
 
@@ -46,7 +46,7 @@ export default function Brands() {
           <InteractiveText
             text="OUR BRAND PARTNERS"
             centered={false}
-            className="text-4xl md:text-5xl font-display text-black"
+            className="text-4xl md:text-5xl font-branding text-black"
           />
         </header>
 

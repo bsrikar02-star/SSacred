@@ -21,21 +21,21 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   useEffect(() => {
     const messageInterval = setInterval(() => {
       setMessageIndex((prev) => (prev + 1) % messages.length);
-    }, 750);
+    }, 400);
 
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressInterval);
           clearInterval(messageInterval);
-          setTimeout(onComplete, 800);
+          setTimeout(onComplete, 300);
           return 100;
         }
-        // Custom easing-like speed
-        const increment = prev < 55 ? 15 : prev < 80 ? 8 : prev < 95 ? 5 : 2;
+        // Faster increments for snappier feel
+        const increment = prev < 55 ? 25 : prev < 80 ? 14 : prev < 95 ? 8 : 3;
         return prev + Math.random() * increment;
       });
-    }, 240);
+    }, 120);
 
     return () => {
       clearInterval(progressInterval);

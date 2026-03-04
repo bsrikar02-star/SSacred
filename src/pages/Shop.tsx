@@ -1,20 +1,21 @@
 import { motion } from 'motion/react';
 import { InteractiveText } from '../components/InteractiveText';
 import { ShoppingCart, Heart, Filter } from 'lucide-react';
+import { AISearchBar } from '../components/AISearchBar';
 
 const products = [
-  { name: 'Brutalist Raw Jacket', brand: 'RAWCRAFT', price: '₹3,499', oldPrice: '₹4,999', discount: '30%', img: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Void Knit Sweater', brand: 'VENOM INK', price: '₹2,199', oldPrice: '₹3,499', discount: '37%', img: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Grid Tech Shell', brand: 'GRIDLOCK', price: '₹4,799', oldPrice: '₹6,999', discount: '31%', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Urban Cargo Drifters', brand: 'GRIDLOCK', price: '₹2,499', oldPrice: '₹3,799', discount: '34%', img: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Shadow Cargo V2', brand: 'RAWCRAFT', price: '₹2,799', oldPrice: '₹3,999', discount: '30%', img: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Cyber Windbreaker', brand: 'GRIDLOCK', price: '₹5,499', oldPrice: '₹7,999', discount: '31%', img: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Obsidian Overshirt', brand: 'VENOM INK', price: '₹3,199', oldPrice: '₹4,499', discount: '28%', img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Silk Pattern Kaftan', brand: 'MOTH & SILK', price: '₹6,499', oldPrice: '₹8,999', discount: '27%', img: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Distressed Worker Vest', brand: 'RAWCRAFT', price: '₹1,999', oldPrice: '₹2,999', discount: '33%', img: 'https://images.unsplash.com/photo-1551537482-f2075a1d41f2?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Silver Linings Belt', brand: 'MOTH & SILK', price: '₹1,499', oldPrice: '₹2,199', discount: '31%', img: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Tactical Utility Pack', brand: 'GRIDLOCK', price: '₹3,299', oldPrice: '₹4,799', discount: '31%', img: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Midnight Beanie', brand: 'VENOM INK', price: '₹899', oldPrice: '₹1,299', discount: '30%', img: 'https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Brutalist Raw Jacket', brand: 'RAWCRAFT', price: '₹3,499', oldPrice: '₹4,999', discount: '30%', img: '/products/jacket_brutalist_raw.png' },
+  { name: 'Chaos Knit Sweater', brand: 'VENOM INK', price: '₹2,199', oldPrice: '₹3,499', discount: '37%', img: '/products/sweater_chaos_knit.png' },
+  { name: 'Grid Tech Shell', brand: 'GRIDLOCK', price: '₹4,799', oldPrice: '₹6,999', discount: '31%', img: '/products/jacket_grid_tech_shell.png' },
+  { name: 'Cargo Drifter Pants', brand: 'GRIDLOCK', price: '₹2,499', oldPrice: '₹3,799', discount: '34%', img: '/products/pants_cargo_drifter.png' },
+  { name: 'Shadow Cargo V2', brand: 'RAWCRAFT', price: '₹2,799', oldPrice: '₹3,999', discount: '30%', img: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Midnight Puffer Jacket', brand: 'VENOM INK', price: '₹4,499', oldPrice: '₹6,999', discount: '35%', img: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Void Overshirt', brand: 'VENOM INK', price: '₹3,199', oldPrice: '₹4,499', discount: '28%', img: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Rebel Club Jersey', brand: 'RAWCRAFT', price: '₹2,599', oldPrice: '₹3,799', discount: '31%', img: 'https://images.unsplash.com/photo-1571945153237-4929e783af4a?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Acid Wash Hoodie', brand: 'RAWCRAFT', price: '₹3,299', oldPrice: '₹4,999', discount: '33%', img: 'https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Archival Printed Scarf', brand: 'MOTH & SILK', price: '₹1,499', oldPrice: '₹2,199', discount: '31%', img: '/products/scarf_archival_printed.png' },
+  { name: 'Tactical Canvas Tote', brand: 'GRIDLOCK', price: '₹3,299', oldPrice: '₹4,799', discount: '31%', img: '/products/bag_tactical_canvas_tote.png' },
+  { name: 'Graphite Boxy Knit', brand: 'MOTH & SILK', price: '₹2,199', oldPrice: '₹3,299', discount: '33%', img: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800&auto=format&fit=crop' },
 ];
 
 export default function Shop() {
@@ -35,6 +36,8 @@ export default function Shop() {
             <Filter size={14} /> FILTER & SORT
           </button>
         </header>
+
+        <AISearchBar />
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
           {products.map((product, i) => (

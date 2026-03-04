@@ -19,6 +19,8 @@ import Help from './pages/Help';
 import Auth from './pages/Auth';
 import Support from './pages/Support';
 import Wishlist from './pages/Wishlist';
+import Careers from './pages/Careers';
+import Recommendations from './pages/Recommendations';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,6 +51,8 @@ export default function App() {
               <Route path="/help" element={<PageWrapper><Help /></PageWrapper>} />
               <Route path="/login" element={<PageWrapper><Auth /></PageWrapper>} />
               <Route path="/support" element={<PageWrapper><Support /></PageWrapper>} />
+              <Route path="/careers" element={<PageWrapper><Careers /></PageWrapper>} />
+              <Route path="/recommendations" element={<PageWrapper><Recommendations /></PageWrapper>} />
             </Routes>
           </AnimatePresence>
         </main>

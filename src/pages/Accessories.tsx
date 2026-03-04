@@ -2,29 +2,32 @@ import { motion } from 'motion/react';
 import { InteractiveText } from '../components/InteractiveText';
 import { ShoppingCart, Heart, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { AISearchBar } from '../components/AISearchBar';
 
 const accessories = [
-  { name: 'Silver Link Chain', brand: 'MOTH & SILK', price: '₹999', oldPrice: '₹1,499', img: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Tactical Chest Rig', brand: 'GRIDLOCK', price: '₹1,899', oldPrice: '₹2,999', img: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Cargo Sling Bag', brand: 'GRIDLOCK', price: '₹1,299', oldPrice: '₹1,999', img: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Void Sunglasses', brand: 'VENOM INK', price: '₹2,199', oldPrice: '₹3,499', img: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Layered Bead Necklace', brand: 'MOTH & SILK', price: '₹999', oldPrice: '₹1,499', img: 'https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Tactical Chest Rig', brand: 'GRIDLOCK', price: '₹1,899', oldPrice: '₹2,999', img: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Cargo Sling Bag', brand: 'GRIDLOCK', price: '₹1,299', oldPrice: '₹1,999', img: '/products/bag_tactical_canvas_tote.png' },
+  { name: 'Void Chunky Shades', brand: 'VENOM INK', price: '₹2,199', oldPrice: '₹3,499', img: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800&auto=format&fit=crop' },
   { name: 'Brutalist Beanie', brand: 'RAWCRAFT', price: '₹799', oldPrice: '₹1,199', img: 'https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Industrial Belt', brand: 'GRIDLOCK', price: '₹1,099', oldPrice: '₹1,699', img: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Industrial Web Belt', brand: 'GRIDLOCK', price: '₹1,099', oldPrice: '₹1,699', img: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop' },
 ];
 
 export default function Accessories() {
   return (
     <div className="bg-white min-h-screen noise-grain selection:bg-black selection:text-white">
-      <div className="pt-32 pb-20 px-6 max-w-[1400px] mx-auto">
-        <header className="mb-20">
+      <div className="pt-32 pb-20 px-6 max-w-[1400px] mx-auto relative z-10">
+        <header className="mb-12">
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-black/30 mb-4 block underline decoration-[#C8A84B] underline-offset-8">THE SCULPTED DETAIL</span>
           <InteractiveText
             text="ACCESSORIES"
             hoverEffect="leopard"
             centered={false}
-            className="text-5xl md:text-7xl font-branding text-black"
+            className="text-5xl md:text-7xl font-branding text-black mb-4"
           />
         </header>
+
+        <AISearchBar />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
           {accessories.map((item, i) => (

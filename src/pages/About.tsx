@@ -7,7 +7,7 @@ export default function About() {
     <div className="bg-white min-h-screen noise-grain selection:bg-black selection:text-white">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col justify-end p-6 md:p-12 max-w-[1400px] mx-auto">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center grayscale" />
+        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1519744346361-7a029b427a59?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center grayscale" />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10" />
 
         <div className="relative z-20 max-w-4xl pb-20">
@@ -40,7 +40,7 @@ export default function About() {
               whileInView={{ scale: 1 }}
               transition={{ duration: 2 }}
               viewport={{ once: true }}
-              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop"
               alt="SSacred Philosophy"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2000ms]"
               referrerPolicy="no-referrer"

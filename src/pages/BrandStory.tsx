@@ -6,29 +6,29 @@ const brandStories = {
     name: 'RAWCRAFT',
     tagline: 'Brutalist Streetwear from the heart of Delhi',
     story: 'Founded in 2019, RAWCRAFT was born from the concrete jungles of New Delhi. Inspired by brutalist architecture and the raw energy of the streets, every piece is a statement of resilience. We use heavyweight fabrics and industrial techniques to create clothing that lasts as long as the stories they tell.',
-    img1: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop',
-    img2: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop'
+    img1: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop',
+    img2: 'https://images.unsplash.com/photo-1574634534894-89d7576c8259?q=80&w=800&auto=format&fit=crop'
   },
   'venom-ink': {
     name: 'VENOM INK',
     tagline: 'Dark Editorial Couture from Mumbai',
     story: 'VENOM INK is the intersection of high fashion and the occult. Based in Mumbai, we explore the darker side of the human psyche through intricate embroidery, avant-garde silhouettes, and a palette of absolute void. Our clothing is for those who find beauty in the shadows.',
-    img1: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop',
-    img2: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=800&auto=format&fit=crop'
+    img1: 'https://images.unsplash.com/photo-1519744346361-7a029b427a59?q=80&w=800&auto=format&fit=crop',
+    img2: 'https://images.unsplash.com/photo-1610088441520-4352457e7095?q=80&w=800&auto=format&fit=crop'
   },
   'gridlock': {
     name: 'GRIDLOCK',
     tagline: 'Technical Futurism for the Urban Nomad',
     story: 'GRIDLOCK is built for the hyper-connected world. Our Bangalore-based studio focuses on technical fabrics, modular designs, and utility that doesn\'t compromise on aesthetic. We create gear for the urban nomad who navigates the digital and physical grids simultaneously.',
-    img1: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800&auto=format&fit=crop',
-    img2: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?q=80&w=800&auto=format&fit=crop'
+    img1: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop',
+    img2: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop'
   },
   'moth-silk': {
     name: 'MOTH & SILK',
     tagline: 'Old Money Revived for the New Generation',
     story: 'MOTH & SILK brings the elegance of the past into the present. Based in Pune, we source the finest silks and linens to create timeless pieces that speak of quiet luxury. We believe in the "Old Money" aesthetic — refined, understated, and eternally stylish.',
-    img1: 'https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=800&auto=format&fit=crop',
-    img2: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop'
+    img1: 'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=800&auto=format&fit=crop',
+    img2: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop'
   }
 };
 

@@ -1,25 +1,25 @@
+import React, { useRef, useState } from 'react';
 import { ArrowRight, Play, ChevronRight, ChevronLeft, ShoppingCart, Heart } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { useRef, useState } from 'react';
 import { InteractiveText } from '../components/InteractiveText';
 
 const newArrivals = [
-  { name: 'Brutalist Raw Jacket', brand: 'RAWCRAFT', price: '₹3,499', oldPrice: '₹4,999', discount: '30%', img: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Void Knit Sweater', brand: 'VENOM INK', price: '₹2,199', oldPrice: '₹3,499', discount: '37%', img: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Grid Tech Shell', brand: 'GRIDLOCK', price: '₹4,799', oldPrice: '₹6,999', discount: '31%', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Silk Archival Scarf', brand: 'MOTH & SILK', price: '₹1,299', oldPrice: '₹1,999', discount: '35%', img: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Urban Cargo Drifters', brand: 'GRIDLOCK', price: '₹2,499', oldPrice: '₹3,799', discount: '34%', img: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Heavy Canvas Tote', brand: 'RAWCRAFT', price: '₹999', oldPrice: '₹1,499', discount: '33%', img: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Brutalist Raw Jacket', brand: 'RAWCRAFT', price: '₹3,499', oldPrice: '₹4,999', discount: '30%', img: '/products/jacket_brutalist_raw.png' },
+  { name: 'Chaos Knit Sweater', brand: 'VENOM INK', price: '₹2,199', oldPrice: '₹3,499', discount: '37%', img: '/products/sweater_chaos_knit.png' },
+  { name: 'Grid Tech Shell', brand: 'GRIDLOCK', price: '₹4,799', oldPrice: '₹6,999', discount: '31%', img: '/products/jacket_grid_tech_shell.png' },
+  { name: 'Archival Printed Scarf', brand: 'MOTH & SILK', price: '₹1,299', oldPrice: '₹1,999', discount: '35%', img: '/products/scarf_archival_printed.png' },
+  { name: 'Cargo Drifter Pants', brand: 'GRIDLOCK', price: '₹2,499', oldPrice: '₹3,799', discount: '34%', img: '/products/pants_cargo_drifter.png' },
+  { name: 'Tactical Canvas Tote', brand: 'RAWCRAFT', price: '₹999', oldPrice: '₹1,499', discount: '33%', img: '/products/bag_tactical_canvas_tote.png' },
 ];
 
 const personalised = [
-  { name: 'Midnight Puffer', brand: 'VENOM INK', price: '₹4,499', oldPrice: '₹6,999', discount: '35%', img: 'https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Silver Link Chain', brand: 'MOTH & SILK', price: '₹999', oldPrice: '₹1,499', discount: '33%', img: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Tactical Chest Rig', brand: 'GRIDLOCK', price: '₹1,899', oldPrice: '₹2,999', discount: '36%', img: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Velvet Evening Blazer', brand: 'RAWCRAFT', price: '₹5,999', oldPrice: '₹8,999', discount: '33%', img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Graphite Knit Sweater', brand: 'MOTH & SILK', price: '₹2,199', oldPrice: '₹3,299', discount: '33%', img: 'https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?q=80&w=800&auto=format&fit=crop' },
-  { name: 'Cargo Sling Bag', brand: 'GRIDLOCK', price: '₹1,299', oldPrice: '₹1,999', discount: '35%', img: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Midnight Puffer Jacket', brand: 'VENOM INK', price: '₹4,499', oldPrice: '₹6,999', discount: '35%', img: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Layered Bead Necklace', brand: 'MOTH & SILK', price: '₹999', oldPrice: '₹1,499', discount: '33%', img: 'https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Tactical Chest Rig', brand: 'GRIDLOCK', price: '₹1,899', oldPrice: '₹2,999', discount: '36%', img: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Acid Wash Hoodie', brand: 'RAWCRAFT', price: '₹3,299', oldPrice: '₹4,999', discount: '33%', img: 'https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Graphite Boxy Knit', brand: 'MOTH & SILK', price: '₹2,199', oldPrice: '₹3,299', discount: '33%', img: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Cargo Sling Bag', brand: 'GRIDLOCK', price: '₹1,299', oldPrice: '₹1,999', discount: '35%', img: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop' },
 ];
 
 const featuredBrands = [
@@ -29,7 +29,16 @@ const featuredBrands = [
   { name: 'MOTH & SILK', tag: 'Old Money Luxury' },
 ];
 
-function ProductCard({ product, index }: { product: typeof newArrivals[0]; index: number }) {
+interface Product {
+  name: string;
+  brand: string;
+  price: string;
+  oldPrice: string;
+  discount: string;
+  img: string;
+}
+
+const ProductCard: React.FC<{ product: Product; index: number }> = ({ product, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -183,14 +192,14 @@ export default function Home() {
               </Link>
             </div>
             <div className="w-full md:w-1/2 relative overflow-hidden h-[350px] md:h-auto order-1 md:order-2">
-              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1200&auto=format&fit=crop" className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-[2000ms]" alt="Luxury Wardrobe" />
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop" className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-[2000ms]" alt="Streetwear Wardrobe" />
             </div>
           </div>
 
           {/* Accessories – Photo Left, Text Right */}
           <div className="flex-1 flex flex-col md:flex-row group">
             <div className="w-full md:w-1/2 relative overflow-hidden h-[350px] md:h-auto">
-              <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop" className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-[2000ms]" alt="Accessories" />
+              <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=1200&auto=format&fit=crop" className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-[2000ms]" alt="Accessories" />
             </div>
             <div className="w-full md:w-1/2 p-10 lg:p-14 flex flex-col justify-center">
               <span className="font-mono text-[9px] font-bold uppercase tracking-[0.5em] text-black/30 mb-6 block">THE SCULPTED DETAIL</span>

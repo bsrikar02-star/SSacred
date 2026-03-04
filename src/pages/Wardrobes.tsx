@@ -1,50 +1,34 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { AISearchBar } from '../components/AISearchBar';
+import { InteractiveText } from '../components/InteractiveText';
 
 const curations = [
   {
     id: 1,
-    title: 'Curation One',
-    img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop',
+    title: 'The Oversized Uniform',
+    img: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop',
     hotspots: [
       { top: '30%', left: '45%', label: 'Heavyweight Hoodie', link: '/shop' },
-      { top: '70%', left: '50%', label: 'Tech Cargo Pants', link: '/shop' }
+      { top: '70%', left: '50%', label: 'Cargo Drifter Pants', link: '/shop' }
     ]
   },
   {
     id: 2,
-    title: 'Curation Two',
-    img: 'https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1200&auto=format&fit=crop',
+    title: 'Street Grid Edit',
+    img: 'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=1200&auto=format&fit=crop',
     hotspots: [
-      { top: '35%', left: '48%', label: 'Linen Shirt', link: '/shop' },
-      { top: '75%', left: '45%', label: 'Tailored Trousers', link: '/shop' }
+      { top: '35%', left: '48%', label: 'Graphic Oversized Tee', link: '/shop' },
+      { top: '75%', left: '45%', label: 'Shadow Cargo Pants', link: '/shop' }
     ]
   },
   {
     id: 3,
-    title: 'Curation Three',
-    img: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1200&auto=format&fit=crop',
+    title: 'The Layered Look',
+    img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1200&auto=format&fit=crop',
     hotspots: [
-      { top: '25%', left: '50%', label: 'Cyber Shell', link: '/shop' },
-      { top: '65%', left: '48%', label: 'Modular Vest', link: '/shop' }
-    ]
-  },
-  {
-    id: 4,
-    title: 'Curation Four',
-    img: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop',
-    hotspots: [
-      { top: '30%', left: '45%', label: 'Silk Dress', link: '/shop' },
-      { top: '70%', left: '50%', label: 'Leather Boots', link: '/shop' }
-    ]
-  },
-  {
-    id: 5,
-    title: 'Curation Five',
-    img: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop',
-    hotspots: [
-      { top: '30%', left: '45%', label: 'Biker Jacket', link: '/shop' },
-      { top: '70%', left: '50%', label: 'Distressed Denim', link: '/shop' }
+      { top: '30%', left: '45%', label: 'Void Overshirt', link: '/shop' },
+      { top: '70%', left: '50%', label: 'Cargo Drifter Pants', link: '/shop' }
     ]
   }
 ];
@@ -55,8 +39,14 @@ export default function Wardrobes() {
       <div className="max-w-7xl mx-auto">
         <header className="mb-16">
           <span className="font-mono text-[9px] font-bold uppercase tracking-[0.5em] text-[#C8A84B]/60 mb-4 block underline decoration-[#C8A84B] underline-offset-8">THE CURATED UNIVERSE</span>
-          <h1 className="text-5xl md:text-7xl font-branding text-[#F5F2ED] leading-none">Wardrobes</h1>
+          <InteractiveText
+            text="WARDROBES"
+            centered={false}
+            className="text-5xl md:text-7xl font-branding text-[#F5F2ED] mb-4"
+          />
         </header>
+
+        <AISearchBar />
 
         <div className="space-y-16">
           {curations.map((curation, i) => (
