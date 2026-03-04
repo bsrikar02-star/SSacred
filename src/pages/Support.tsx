@@ -35,7 +35,7 @@ export default function Support() {
                         text="WE HAVE YOUR BACK"
                         hoverEffect="leopard"
                         centered={true}
-                        className="text-3xl md:text-5xl lg:text-7xl font-branding text-black leading-none mb-10"
+                        className="text-5xl md:text-6xl lg:text-8xl font-branding text-black leading-none mb-10"
                     />
                     <p className="text-[14px] md:text-[16px] font-medium text-black/60 leading-relaxed max-w-2xl uppercase tracking-wider">
                         AT <span className="leopard-permanent">SSacred</span>, WE STAND AS THE VIGILANT MIDDLEMAN BETWEEN YOU AND THE BRANDS. OUR MISSION IS TO ENSURE THAT EVERY STITCH DELIVERED MEETS THE UNCOMPROMISING STANDARDS WE PROMISE.
@@ -105,7 +105,7 @@ export default function Support() {
                     <InteractiveText
                         text="STILL HAVE QUESTIONS?"
                         hoverEffect="gold"
-                        className="text-3xl md:text-5xl font-branding text-black mb-10"
+                        className="text-5xl md:text-6xl font-branding text-black mb-10"
                     />
                     <button className="px-14 py-5 bg-black text-white font-mono text-[11px] font-black uppercase tracking-[0.4em] hover:bg-[#8B6914] transition-all active:scale-95 shadow-2xl">
                         CONTACT CURATOR SUPPORT

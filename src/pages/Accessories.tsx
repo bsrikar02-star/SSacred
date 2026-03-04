@@ -23,7 +23,7 @@ export default function Accessories() {
             text="ACCESSORIES"
             hoverEffect="leopard"
             centered={true}
-            className="text-3xl md:text-5xl lg:text-7xl font-branding text-black mb-4"
+            className="text-5xl md:text-6xl lg:text-8xl font-branding text-black mb-4"
           />
         </header>
 

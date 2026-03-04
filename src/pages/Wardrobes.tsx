@@ -43,7 +43,7 @@ export default function Wardrobes() {
             text="WARDROBES"
             centered={true}
             hoverEffect="leopard"
-            className="text-3xl md:text-5xl lg:text-7xl font-branding text-[#F5F2ED] mb-4"
+            className="text-5xl md:text-6xl lg:text-8xl font-branding text-[#F5F2ED] mb-4"
           />
         </header>
 

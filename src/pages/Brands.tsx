@@ -47,7 +47,7 @@ export default function Brands() {
             text="OUR BRAND PARTNERS"
             centered={true}
             hoverEffect="leopard"
-            className="text-3xl md:text-5xl lg:text-7xl font-branding text-black leading-none mb-10"
+            className="text-5xl md:text-6xl lg:text-8xl font-branding text-black leading-none mb-10"
           />
         </header>
 

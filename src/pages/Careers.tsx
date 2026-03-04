@@ -86,7 +86,7 @@ export default function Careers() {
                             text="JOIN THE SSACRED ARCHIVE"
                             hoverEffect="leopard"
                             centered={true}
-                            className="text-3xl md:text-5xl lg:text-7xl font-branding text-[#111111] mb-8 leading-[0.9] tracking-tight"
+                            className="text-5xl md:text-6xl lg:text-8xl font-branding text-[#111111] mb-8 leading-[0.9] tracking-tight"
                         />
                         <div className="h-[2px] w-16 bg-[#C8A84B] mb-8" />
                         <p className="text-[12px] md:text-[14px] font-bold text-[#111111] leading-relaxed max-w-xl uppercase tracking-[0.1em]">

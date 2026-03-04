@@ -141,15 +141,15 @@ export default function Home() {
               <h1 className="text-[10px] md:text-[11px] font-mono font-black text-white/90 tracking-[0.8em] mb-1.5 uppercase">
                 CHANGE YOUR CLOTHING WITH
               </h1>
-              <Link to="/" className="text-6xl md:text-9xl lg:text-[11rem] font-branding leopard-permanent leading-[0.8] logo-hover-effect text-white/90">
+              <Link to="/" className="text-7xl md:text-9xl lg:text-[11rem] font-branding leopard-permanent leading-[0.8] logo-hover-effect text-white/90">
                 SSacred
               </Link>
             </div>
-            <div className="max-w-lg mb-8 px-6">
+            <div className="max-w-xl mb-8 px-6">
               <InteractiveText
                 text="High-quality curated design from niche brands, made accessible for everyone who wants to dress better."
                 hoverEffect="leopard"
-                className="text-[13px] md:text-[14px] font-medium text-white/70 leading-relaxed tracking-wide"
+                className="text-[15px] md:text-[16px] font-medium text-white/70 leading-relaxed tracking-wide"
                 delay={0.5}
               />
             </div>
@@ -278,7 +278,7 @@ export default function Home() {
               <InteractiveText text="MAKE THEM COUNT." className="text-4xl md:text-6xl font-branding" centered={true} />
             </div>
             <div className="mt-12">
-              <InteractiveText text="DRESS LIKE YOU MEAN IT." className="text-3xl md:text-5xl font-display text-white/40" hoverEffect="gold" centered={true} />
+              <InteractiveText text="DRESS LIKE YOU MEAN IT." className="text-5xl md:text-6xl font-display text-white/40" hoverEffect="gold" centered={true} />
             </div>
           </div>
           <Link to="/story">

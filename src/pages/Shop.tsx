@@ -29,7 +29,7 @@ export default function Shop() {
               text="THE FULL COLLECTION"
               hoverEffect="leopard"
               centered={true}
-              className="text-3xl md:text-5xl lg:text-7xl font-branding text-black leading-none"
+              className="text-5xl md:text-6xl lg:text-8xl font-branding text-black leading-none"
             />
           </div>
 

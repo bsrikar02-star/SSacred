@@ -20,7 +20,7 @@ export default function About() {
             <span className="font-mono text-[10px] font-bold uppercase tracking-[0.5em] text-[#C8A84B] mb-8 block underline decoration-[#C8A84B] underline-offset-8">THE MANIFESTO</span>
             <InteractiveText
               text="WE ARE FOR EVERYONE WHO WANTS TO DRESS BETTER."
-              className="text-3xl md:text-5xl lg:text-7xl font-branding text-black leading-none mb-10 tracking-tight"
+              className="text-5xl md:text-6xl lg:text-8xl font-branding text-black leading-none mb-10 tracking-tight"
               hoverEffect="leopard"
               centered={true}
             />
@@ -66,7 +66,7 @@ export default function About() {
                 text="01 : ACCESSIBLE QUALITY"
                 hoverEffect="gold"
                 centered={false}
-                className="text-3xl md:text-5xl font-display text-white mb-6 uppercase"
+                className="text-5xl md:text-6xl font-display text-white mb-6 uppercase"
               />
               <p className="font-mono text-[13px] text-white/50 leading-relaxed max-w-lg uppercase tracking-widest">
                 Every brand on <span className="leopard-permanent text-white">SSacred</span> is handpicked for story and craft. We bridge the gap between emerging independent designers and you, ensuring that instead of settling for mass-produced, second-tier garments, you can invest in superior craftsmanship and expressive, high-quality design without the luxury markup.
@@ -85,7 +85,7 @@ export default function About() {
                 text="02 : REBELLIOUS IDENTITY"
                 hoverEffect="gold"
                 centered={false}
-                className="text-3xl md:text-5xl font-display text-white mb-6 uppercase"
+                className="text-5xl md:text-6xl font-display text-white mb-6 uppercase"
               />
               <p className="font-mono text-[13px] text-white/50 leading-relaxed max-w-lg uppercase tracking-widest">
                 We believe fashion is your first word. We find the brands that refuse to compromise, offering pieces that speak volumes without making a sound.
