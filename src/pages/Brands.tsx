@@ -45,9 +45,9 @@ export default function Brands() {
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.4em] text-black/30 mb-4 block">COLLECTIVE</span>
           <InteractiveText
             text="OUR BRAND PARTNERS"
-            centered={false}
+            centered={true}
             hoverEffect="leopard"
-            className="text-4xl md:text-7xl lg:text-8xl font-branding text-black leading-none mb-10"
+            className="text-3xl md:text-5xl lg:text-7xl font-branding text-black leading-none mb-10"
           />
         </header>
 

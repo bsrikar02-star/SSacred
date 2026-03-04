@@ -31,7 +31,7 @@ export const InteractiveText = ({
         >
             {words.map((word, i) => {
                 const lowerWord = word.toLowerCase().replace(/[^a-z]/g, '');
-                const leopardKeywords = ["ssacred", "wardrobes", "wardrobe", "brand", "collection", "accessories", "accessory", "archive", "story", "better", "back"];
+                const leopardKeywords = ["ssacred"];
                 const isLeopardText = leopardKeywords.includes(lowerWord) || (lowerWord === "count" && text.toLowerCase().includes("make them"));
                 const shouldBePermanent = permanentEffect || isLeopardText;
 
@@ -57,7 +57,7 @@ export const InteractiveText = ({
                             transition: { duration: 0.2 }
                         }}
                         className={`mr-[0.25em] inline-block cursor-default transition-all duration-300 ${shouldBePermanent ? "leopard-permanent" :
-                            (hoverEffect === "leopard" ? "hover-leopard" : "")
+                            (hoverEffect === "leopard" && isLeopardText ? "hover-leopard" : "")
                             } ${wordClassName}`}
                     >
                         {word}

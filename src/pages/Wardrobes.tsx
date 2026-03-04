@@ -41,9 +41,9 @@ export default function Wardrobes() {
           <span className="font-mono text-[9px] font-bold uppercase tracking-[0.5em] text-[#C8A84B]/60 mb-4 block underline decoration-[#C8A84B] underline-offset-8">THE CURATED UNIVERSE</span>
           <InteractiveText
             text="WARDROBES"
-            centered={false}
+            centered={true}
             hoverEffect="leopard"
-            className="text-4xl md:text-7xl lg:text-8xl font-branding text-[#F5F2ED] mb-4"
+            className="text-3xl md:text-5xl lg:text-7xl font-branding text-[#F5F2ED] mb-4"
           />
         </header>
 

@@ -10,18 +10,19 @@ export default function About() {
         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1519744346361-7a029b427a59?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center grayscale" />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10" />
 
-        <div className="relative z-20 container-wide pb-20">
+        <div className="relative z-20 container-wide pb-20 flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            className="flex flex-col items-center"
           >
             <span className="font-mono text-[10px] font-bold uppercase tracking-[0.5em] text-[#C8A84B] mb-8 block underline decoration-[#C8A84B] underline-offset-8">THE MANIFESTO</span>
             <InteractiveText
               text="WE ARE FOR EVERYONE WHO WANTS TO DRESS BETTER."
-              className="text-4xl md:text-6xl lg:text-8xl font-branding text-black leading-none mb-10 tracking-tight"
+              className="text-3xl md:text-5xl lg:text-7xl font-branding text-black leading-none mb-10 tracking-tight"
               hoverEffect="leopard"
-              centered={false}
+              centered={true}
             />
             <p className="font-mono text-[14px] md:text-[16px] text-black/60 uppercase tracking-widest leading-relaxed max-w-2xl font-bold">
               SSacred was born to bridge the gap between niche visionaries and everyday wardrobes. We believe that for the exact same budget, you shouldn't have to settle for second-tier mainstream fabrics. You deserve high-quality, authentic design.

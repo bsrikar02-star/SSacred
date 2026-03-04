@@ -71,12 +71,13 @@ export default function Careers() {
         <div className="bg-white min-h-screen noise-grain selection:bg-[#C8A84B] selection:text-white font-sans overflow-x-hidden">
             <div className="pt-32 pb-16 px-6 max-w-[1400px] mx-auto">
                 {/* Hero Header */}
-                <header className="mb-24">
+                <header className="flex flex-col items-center text-center mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                        className="flex flex-col items-center"
                     >
                         <span className="font-sans text-[9px] font-black uppercase tracking-[0.6em] text-[#C8A84B] mb-8 block">
                             COLLECTIVE RECRUITMENT
@@ -84,8 +85,8 @@ export default function Careers() {
                         <InteractiveText
                             text="JOIN THE SSACRED ARCHIVE"
                             hoverEffect="leopard"
-                            centered={false}
-                            className="text-4xl md:text-7xl lg:text-8xl font-branding text-[#111111] mb-8 leading-[0.9] tracking-tight"
+                            centered={true}
+                            className="text-3xl md:text-5xl lg:text-7xl font-branding text-[#111111] mb-8 leading-[0.9] tracking-tight"
                         />
                         <div className="h-[2px] w-16 bg-[#C8A84B] mb-8" />
                         <p className="text-[12px] md:text-[14px] font-bold text-[#111111] leading-relaxed max-w-xl uppercase tracking-[0.1em]">

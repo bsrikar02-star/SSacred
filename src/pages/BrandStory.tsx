@@ -50,8 +50,9 @@ export default function BrandStory() {
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-[#8B6914] mb-4 block">The Story</span>
           <InteractiveText
             text={`${brand.name} STORY`}
-            className="text-7xl md:text-9xl font-branding text-[#F5F2ED] mb-6"
+            className="text-3xl md:text-5xl lg:text-7xl font-branding text-[#F5F2ED] mb-6"
             hoverEffect="leopard"
+            centered={true}
           />
           <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#F5F2ED]/40">{brand.tagline}</p>
         </motion.div>
